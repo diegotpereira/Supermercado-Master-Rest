@@ -3,13 +3,13 @@
   <div id="content" > 
 
       <div class="d-flex justify-content-center">
-          <h1 class=".tituloForm">Factura de Venta N°{{venta.id}}</h1>
+          <h1 class=".tituloForm">Fatura de Venta N°{{venta.id}}</h1>
       </div>
       <div class="text-center fondo1">
         <div class="row form-group d-flex justify-content-center">
             <!--Campo Nombre-->
             <div class="col-1 p-0 campo">
-                <label  class="letraForm" for="fecha">Fecha: </label>
+                <label  class="letraForm" for="fecha">Data: </label>
                 <output type="text" class="letraForm" name="fecha" id="fechaPublicacion" value="{{getFecha(venta.fecha)}}"></output>
             </div>
 
@@ -33,12 +33,12 @@
 
           <table >
               <tr>
-                <th>Identificador SKU</th>
-                <th>Producto</th>
-                <th>Unidad de Medida</th>
-                <th>Cantidad</th>
+                <th>Código identificador</th>
+                <th>Produto</th>
+                <th>Unidade de Medida</th>
+                <th>Quantidade</th>
                 <th>Valor</th> 
-                <th>Descuento</th> 
+                <th>Desconto</th> 
                 <th>SubTotal</th>
               </tr>
               
@@ -67,17 +67,17 @@
         </div>
 
         <div class="row form-group d-flex justify-content-center">
-            <label for="total">Descuento:</label>
+            <label for="total">Desconto:</label>
             <output type="number" name="total{{venta.id}}" id="total{{venta.id}}" >{{getDescuento()}}</output>
         </div>
 
           <div class="row form-group d-flex justify-content-center">
-              <label for="total">Total Neto:</label>
+              <label for="total">Total Líquido: </label>
               <output type="number" name="total{{venta.id}}" id="total{{venta.id}}" >{{ venta.total - getDescuento()}}</output>
           </div>
 
           <div>
-              <input type="button" class="btn btn-success m-2 col-4" value="Descargar PDF" (click)="generatePDF()"/> 
+              <input type="button" class="btn btn-success m-2 col-4" value="Download PDF" (click)="generatePDF()"/> 
               </div> 
       </div>
           <br>
