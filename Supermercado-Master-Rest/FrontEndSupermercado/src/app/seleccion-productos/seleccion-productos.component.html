@@ -3,10 +3,10 @@
         
         <div  *ngFor="let p of productos" (click)="productSelected(p.id)" > 
           <div class="producto" id = "product{{p.id}}">
-          <br>Nombre: {{p.nombre}}     
-          <br>SKU: {{p.sku}}
+          <br>Nome: {{p.nombre}}     
+          <br>Código: {{p.sku}}
           <br>Valor: {{p.valor}}
-          <br>Descuento: {{p.descuento}}
+          <br>Desconto: {{p.descuento}}
         </div>
         </div>
           
