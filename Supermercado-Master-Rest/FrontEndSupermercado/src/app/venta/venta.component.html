@@ -1,6 +1,6 @@
 
   <div class="d-flex justify-content-center">
-        <h1 class=".tituloForm">Ventas</h1>
+        <h1 class=".tituloForm">Compras</h1>
   </div>
 
 <form (ngSubmit)="agregarProducto()">
@@ -8,8 +8,8 @@
   <div class="row d-flex justify-content-center mb-0">            
     <div class="row form-group d-flex justify-content-center">
 
-      <button type="button" class="btn btn-primary mb-3" (click)="agregarProducto()" id="agregarProducto">Agregar Venta</button>
-      <button type="button" class="btn btn-primary mb-3" (click)="listaVentas()" id="listaVentas">Listar Ventas</button>
+      <button type="button" class="btn btn-primary mb-3" (click)="agregarProducto()" id="agregarProducto">Adicionar Compras</button>
+      <button type="button" class="btn btn-primary mb-3" (click)="listaVentas()" id="listaVentas">Listar Compras</button>
   </div></div>
     
     <app-add-venta (listaVentas)="listaVentas($event)" *ngIf="showAdd"  ></app-add-venta>
