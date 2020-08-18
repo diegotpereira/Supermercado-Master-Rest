@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+.selector{
+    width: auto;
+    float: left;
+}
+
+.seleccionados{
+    width: 40%;
+    float: left;
+    margin-left: 50px;
+}
+
+
+
+/* CSS Document */
+.letraForm{
+	color:#FFF;
+	margin-top:5px;
+}
+
+.fondo2{
+	background:#2B2B2E;
+	opacity:1;
+	margin-bottom:150px;
+}
+.fondo1{
+	background:#2B2B2E;
+	opacity:0.8;
+	margin-top:25px;
+	margin-right:500px;
+	margin-left:500px;
+	border-radius:8px;
+	padding-bottom: 10px;
+}
+.campo{
+	margin: 0px 10px 0px 10px;	
+}
+.tituloForm{
+	color:#FFF;
+	font-family: 'Patua One', cursive;
+	font-size:24px	
+}
+table{
+    background:#2B2B2E;
+    color:#FFF;
+    border-radius:8px;
+	padding: 20px;
+	text-align: center;
+}
+
+td{
+	margin-left: 5px;
+}

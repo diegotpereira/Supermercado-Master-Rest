@@ -1,0 +1,10 @@
+table{
+    background:#2B2B2E;
+    color:#FFF;
+    border-radius:8px;
+    padding: 20px;
+}
+
+td{
+	margin-left: 5px;
+}

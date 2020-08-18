@@ -1,0 +1,48 @@
+<div class="text-center fondo1">
+  <form id="regisVete" (ngSubmit)="addProducto()">
+    <div class="row d-flex justify-content-center mb-0">
+      <label class="tituloForm mb-0 mt-3">Registrar un producto</label>
+    </div>
+    <!--Fila 1 Datos Principales-->
+    <div class="row form-group d-flex justify-content-center">
+      <!--Campo Nombre-->
+      <div class="col-5 p-0 campo">
+        <label class="letraForm">Nombre</label>
+        <output type="text" class="form-control" [(ngModel)]="producto.nombre" name="nombre" placeholder="Nombre">{{producto.nombre}}</output>
+      </div>
+      <!--Fin Campo Nombre-->
+      <!--Campo Nombre-->
+      <div class="col-5 p-0 campo">
+          <label class="letraForm">Sku</label>
+          <output type="text" class="form-control" [(ngModel)]="producto.sku" name="sku" placeholder="Sku">{{producto.sku}}</output>
+        </div>
+        <!--Fin Campo Nombre-->
+    </div>
+    <div class="row form-group d-flex justify-content-center">
+        <!--Campo Nombre-->
+        <div class="col-5 p-0 campo">
+          <label class="letraForm">Unidad de Medida</label>
+          <output type="text" class="form-control" [(ngModel)]="producto.uniMedida" name="uniMedida" placeholder="uniMedida">{{producto.uniMedida}}</output>
+        </div>
+        <!--Fin Campo Nombre-->
+        <!--Campo Nombre-->
+        <div class="col-5 p-0 campo">
+          <label class="letraForm">Valor</label>
+          <output type="text" class="form-control" [(ngModel)]="producto.valor" name="valor" placeholder="Valor">$ {{producto.valor}}</output>
+        </div>
+        <!--Fin Campo Nombre-->
+      </div>
+      <div class="row form-group d-flex justify-content-center">
+          <!--Campo Nombre-->
+          <div class="col-5 p-0 campo">
+            <label class="letraForm">Descuento</label>
+            <div class="d-flex justify-component-center">
+              <output type="text" class="form-control col-10"  name="descuento" placeholder="Descuetno">{{producto.descuento}} %</output>
+              
+            </div>
+          </div>
+          <!--Fin Campo Nombre-->
+        </div>
+    
+  </form>
+</div>

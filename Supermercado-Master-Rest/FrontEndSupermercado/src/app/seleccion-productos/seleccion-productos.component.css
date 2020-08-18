@@ -1,0 +1,62 @@
+@charset "utf-8";
+.grid {
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-columns: 200px 200px 200px;
+    border: solid;
+    border-color: royalblue;
+    padding: 30px;
+    border-radius:15px;
+  }
+
+.producto {    
+    border: solid;
+    border-color: black;
+    text-align: center;
+    background-color: #FFF;
+    color: black;
+    font-family: 'Patua One', cursive;
+   }
+
+.productoSeleccionado {    
+    border: solid;
+    border-color: black;
+    text-align: center;
+    background-color: royalblue;
+    color: #FFF;
+    font-family: 'Patua One', cursive;
+   }
+
+ 
+/* CSS Document */
+.letraForm{
+	color:#FFF;
+	margin-top:5px;
+}
+.fondo1{
+	background: #2B2B2E;
+	opacity:0.8;
+	margin-top:25px;
+	margin-right:200px;
+	margin-left:200px;
+	border-radius:8px;
+}
+.fondo2{
+	background:#2B2B2E;
+	opacity:1;
+	margin-bottom:350px;
+}
+.campo{
+	margin: 0px 10px 0px 10px;	
+}
+.tituloForm{
+	color:#FFF;
+	font-family: 'Patua One', cursive;
+	font-size:24px	;
+	
+}
+
+button{
+	margin: 20px;
+}

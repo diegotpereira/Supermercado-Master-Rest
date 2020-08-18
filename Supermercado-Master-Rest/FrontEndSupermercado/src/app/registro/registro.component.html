@@ -1,0 +1,38 @@
+
+
+<div class="text-center fondo1">
+    <form id="regisVete" (ngSubmit)="registrar()">
+      <div class="row d-flex justify-content-center mb-0">
+        <label class="tituloForm mb-0 mt-3">Registro</label>
+      </div>
+      <!--Fila 1 Datos Principales-->
+      <div class="row form-group d-flex justify-content-center">
+        <!--Campo Nombre-->
+        <div class="col-5 p-0 campo">
+          <label class="letraForm">Nombre</label>
+          <input type="text" class="form-control" [(ngModel)]="usuario.nombre" name="nombre" placeholder="Nombre">
+        </div>
+        <!--Fin Campo Nombre-->
+      </div>
+      <div class="row form-group d-flex justify-content-center">
+        <!--Campo Contraseña-->
+        <div class="col-5 p-0 campo">
+          <label class="letraForm">Contraseña</label>
+          <input type="password" class="form-control" [(ngModel)]="usuario.contrasena" name="contrasena" placeholder="Contraseña">
+        </div>
+        <!--Fin Campo Contraseña-->
+      </div>
+      <div class="row form-group d-flex justify-content-center">
+        <div class="col-5 p-0 campo">
+            <label for="inputState">State</label>
+            <select id="inputState" class="form-control" [(ngModel)]="usuario.rol" name="rol">
+            <option value="ROLE_CAJERO" selected>Cajero</option>
+            <option value="ROLE_BODEGERO">Bodegero</option>
+            </select>
+        </div>
+      </div>
+      <div class="row form-group d-flex justify-content-center">
+        <button type="submit" class="btn btn-primary mb-3" id="addProducto">Registrarse</button>
+      </div>
+    </form>
+  </div>

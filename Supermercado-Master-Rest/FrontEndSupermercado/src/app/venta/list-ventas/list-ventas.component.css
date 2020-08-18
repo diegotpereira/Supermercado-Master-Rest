@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+.letraForm{
+	color:#FFF;
+	margin-top:5px;
+}
+
+.fondo2{
+	background:#2B2B2E;
+	opacity:1;
+	margin-bottom:150px;
+}
+.campo{
+    margin: 0px 10px 0px 10px;	
+        
+}
+.tituloForm{
+	color:#FFF;
+	font-family: 'Patua One', cursive;
+	font-size:24px	
+}
+table{
+    background:#2B2B2E;
+    color:#FFF;
+    border-radius:8px;
+    padding: 20px;
+}
+
+td{
+	margin-left: 5px;
+}

@@ -1,0 +1,88 @@
+
+
+  <div id="content" > 
+
+      <div class="d-flex justify-content-center">
+          <h1 class=".tituloForm">Factura de Venta N°{{venta.id}}</h1>
+      </div>
+      <div class="text-center fondo1">
+        <div class="row form-group d-flex justify-content-center">
+            <!--Campo Nombre-->
+            <div class="col-1 p-0 campo">
+                <label  class="letraForm" for="fecha">Fecha: </label>
+                <output type="text" class="letraForm" name="fecha" id="fechaPublicacion" value="{{getFecha(venta.fecha)}}"></output>
+            </div>
+
+            <div class="col-4 p-0 campo">
+                <label class="letraForm"  for="cliente">Cliente: </label>
+                <output type="text" class="letraForm" name="cliente" id="clienteP" value="{{venta.cliente}}"></output>
+            </div>
+
+            <div class="col-2 p-0 campo">
+                <label class="letraForm"  for="total">Total: </label>
+                <output type="text" class="letraForm" name="total" id="total" value="{{venta.total}}"></output>
+            </div>
+        </div>
+      </div>
+      
+      <br>
+    <div class="text-center fondo2">
+      <h2>Detalles</h2>
+      
+      <div>
+
+          <table >
+              <tr>
+                <th>Identificador SKU</th>
+                <th>Producto</th>
+                <th>Unidad de Medida</th>
+                <th>Cantidad</th>
+                <th>Valor</th> 
+                <th>Descuento</th> 
+                <th>SubTotal</th>
+              </tr>
+              
+              <tr *ngFor="let d of venta.detalles" >
+                <td>{{d.producto.sku}}</td>
+                <td>{{d.producto.nombre}}</td>
+                <td>{{d.producto.uniMedida}}</td>
+                <td>{{d.cantidad}}</td> 
+                <td>{{d.producto.valor}}</td> 
+                <td>{{d.subdescuento}}%</td>  
+                <td>{{d.subTotal}}</td> 
+                
+              </tr>
+              
+
+              
+          </table>
+
+      </div>
+      <br><br><br>
+    </div>
+    <div class="text-center fondo2">
+        <div class="row form-group d-flex justify-content-center">
+            <label for="total">Total:</label>
+            <output type="number" name="total{{venta.id}}" id="total{{venta.id}}" >{{venta.total}}</output>
+        </div>
+
+        <div class="row form-group d-flex justify-content-center">
+            <label for="total">Descuento:</label>
+            <output type="number" name="total{{venta.id}}" id="total{{venta.id}}" >{{getDescuento()}}</output>
+        </div>
+
+          <div class="row form-group d-flex justify-content-center">
+              <label for="total">Total Neto:</label>
+              <output type="number" name="total{{venta.id}}" id="total{{venta.id}}" >{{ venta.total - getDescuento()}}</output>
+          </div>
+
+          <div>
+              <input type="button" class="btn btn-success m-2 col-4" value="Descargar PDF" (click)="generatePDF()"/> 
+              </div> 
+      </div>
+          <br>
+          
+    </div>
+
+  
+  

@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+.letraForm{
+	color:#FFF;
+	margin-top:5px;
+}
+.fondo1{
+	background:#2B2B2E;
+	opacity:0.8;
+	margin-top:25px;
+	margin-right:33%;
+	margin-left:33%;
+	border-radius:8px;
+}
+.fondo2{
+	background:#2B2B2E;
+	opacity:1;
+	margin-bottom:350px;
+}
+.campo{
+	margin: 0px 10px 0px 10px;	
+}
+.tituloForm{
+	color:#FFF;
+	font-family: 'Patua One', cursive;
+	font-size:24px	
+}

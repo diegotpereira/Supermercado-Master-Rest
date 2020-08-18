@@ -1,0 +1,36 @@
+
+<div class="text-center fondo1">
+    <div class="row d-flex justify-content-center mb-0">
+        <div class="seleccionados">  
+            
+            <table >
+                <tr>
+                <th>Cliente</th>
+                <th>Fecha</th> 
+                <th>Total</th> 
+                <th>Factura</th>
+                
+                </tr>
+
+                <tr *ngFor="let v of ventas" >
+                    <td>{{v.cliente}}</td>
+                    <td>{{getFecha(v.fecha)}}</td>
+                    <td>{{v.total}}</td>
+                    <td>
+                        <a [routerLink]="['/facturas/view-factura',v.id]" 
+                        routerLinkActive='router-link-active'>Ver</a>
+                    </td>
+                    <td>
+                    <button type="button" class="btn btn-primary mb-3" (click)="ver(v)" id="ver">Ver</button>
+                    </td>
+                    <td>
+                    <button type="button" class="btn btn-primary mb-3" (click)="borrar(v)" id="borrar">Borrar</button>
+                    </td>
+                    
+                </tr>
+                
+            </table>
+            <br>
+            <br>
+        </div>
+    </div></div>

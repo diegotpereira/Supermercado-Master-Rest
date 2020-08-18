@@ -1,0 +1,63 @@
+<form (ngSubmit)="addVenta()">
+
+  <div class="d-flex justify-content-center">
+      <h2 class=".tituloForm">Agregar Venta</h2>
+  </div>
+
+  <div class="text-center fondo1">
+  <div class="row form-group d-flex justify-content-center">
+    <div class="campo">
+        <label for="cliente" class="letraForm">Cliente:</label>
+        <input type="text" class="form-control" name="cliente" id="cliente" [(ngModel)]="venta.cliente" >
+      </div>
+  </div>
+</div>
+
+  
+  
+  <br><br><br>
+  
+  <div class="selector">
+    <app-seleccion-productos (onProductSelected)="onProductSelected($event)"
+                           (onProductDisSelected)="onProductDisSelected($event)"  
+                            *ngIf="showSelecter" ></app-seleccion-productos>
+  </div>
+
+
+  
+  
+  <div class="seleccionados">  
+      <h2>Productos Seleccionados:</h2>
+      <table >
+          <tr>
+            <th>Producto</th>
+            <th>Valor</th> 
+            <th>Descuento</th> 
+            <th>Cantidad</th>
+            <th>SubTotal</th>
+          </tr>
+
+          <tr *ngFor="let d of detalles" >
+            <td>{{d.producto.nombre}}</td>
+            <td>{{d.producto.valor}}</td> 
+            <td>{{d.producto.descuento}}%</td> 
+            <td> 
+              <input type="number"  name="id" id="id" [(ngModel)]="d.cantidad">
+            </td> 
+            <td>{{getSubTotal(d.cantidad, d.producto.valor)}}</td> 
+            
+          </tr>
+          
+      </table>
+      <br>
+      <br>
+          <label for="total">Total</label>
+          <output type="number" name="total" id="total" >{{getTotal()}}</output>
+      <br>
+      <br>
+
+      <button type="button" class="btn btn-primary mb-3" (click)="addVenta()" id="addVenta">Agregar Venta</button>
+  </div>
+        
+        
+</form>

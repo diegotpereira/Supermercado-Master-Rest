@@ -1,0 +1,34 @@
+ <!--Barra de navegacion-->
+ <nav class="navbar navbar-dark bg-dark">
+    <!-- Navbar content -->
+    <div class="container-fluid px-0">
+      <!--Inicio logo-->
+      <div class="col-1 px-0">
+          <a class="navbar-brand" href="#">Supermercado-REST</a>
+      </div>
+      <!--Fin Inicio Logo-->
+      <!--Menu principal-->
+      <div class="col-9 d-flex justify-content-center">
+        <div class="col-8 d-flex justify-content-between">
+          <a [routerLink]="['productos']" routerLinkActive='router-link-active' class="navbar-brand">Productos</a>
+          
+          <a [routerLink]="['venta']" routerLinkActive='router-link-active' class="navbar-brand">Ventas</a>	
+          
+        </div>
+      </div>
+      <!--Fin Menu Principal-->
+      <!--Boton Salir-->
+      <div class="col-1 d-flex justify-content-end"></div>
+      <!--Fin Boton Salir-->
+    </div>
+  </nav>
+  <!--Fin barra de navegacion-->
+<br>
+<app-login (onLogin)="onLogin($event)" (onRegistro)="onRegistro($event)"  *ngIf ="showLogin"></app-login>
+
+<br>
+<br>
+<router-outlet></router-outlet>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+Powered by Wizchael © 2018 Javeriana ProWeb Java EE

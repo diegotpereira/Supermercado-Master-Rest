@@ -1,0 +1,59 @@
+<h1>Editor de Productos</h1>
+<div class="text-center fondo1">
+  <form id="regisVete" (ngSubmit)="guardarProducto()">
+    <div class="row d-flex justify-content-center mb-0">
+      <label class="tituloForm mb-0 mt-3">Registrar un producto</label>
+    </div>
+    <!--Fila 1 Datos Principales-->
+    <div class="row form-group d-flex justify-content-center">
+      <!--Campo Nombre-->
+      <div class="col-5 p-0 campo">
+        <label class="letraForm">Nombre</label>
+        <input type="text" class="form-control" [(ngModel)]="producto.nombre" name="nombre" placeholder="Nombre">
+      </div>
+      <!--Fin Campo Nombre-->
+      <!--Campo Nombre-->
+      <div class="col-5 p-0 campo">
+          <label class="letraForm">Sku</label>
+          <input type="text" class="form-control" [(ngModel)]="producto.sku" name="sku" placeholder="Sku">
+        </div>
+        <!--Fin Campo Nombre-->
+    </div>
+    <div class="row form-group d-flex justify-content-center">
+        <!--Campo Nombre-->
+        <div class="col-5 p-0 campo">
+          <label class="letraForm">unidad de medida</label>
+          <select class="form-control ml-0 px-2" id="minu1" [(ngModel)]="producto.uniMedida" name="uniMedida">
+            <option>Kg</option>
+            <option>g</option>
+            <option>m</option>
+            <option>cm</option>
+            <option>l</option>
+            <option>ml</option>
+            <option>galón</option>
+          </select>
+        </div>
+        <!--Fin Campo Nombre-->
+        <!--Campo Nombre-->
+        <div class="col-5 p-0 campo">
+          <label class="letraForm">Valor</label>
+          <input type="text" class="form-control" [(ngModel)]="producto.valor" name="valor" placeholder="Valor">
+        </div>
+        <!--Fin Campo Nombre-->
+      </div>
+      <div class="row form-group d-flex justify-content-center">
+          <!--Campo Nombre-->
+          <div class="col-5 p-0 campo">
+            <label class="letraForm">Descuento</label>
+            <div class="d-flex justify-component-center">
+              <input type="text" class="form-control col-10" [(ngModel)]="producto.descuento" name="descuento" placeholder="Descuetno">
+              <label class="letraForm col-1">%</label>
+            </div>
+          </div>
+          <!--Fin Campo Nombre-->
+        </div>
+    <div class="row form-group d-flex justify-content-center">
+      <button type="submit" class="btn btn-primary mb-3" id="guardarProducto">Guardar</button>
+    </div>
+  </form>
+</div>

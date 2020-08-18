@@ -1,0 +1,23 @@
+
+  <div class="d-flex justify-content-center">
+        <h1 class=".tituloForm">Ventas</h1>
+  </div>
+
+<form (ngSubmit)="agregarProducto()">
+    
+  <div class="row d-flex justify-content-center mb-0">            
+    <div class="row form-group d-flex justify-content-center">
+
+      <button type="button" class="btn btn-primary mb-3" (click)="agregarProducto()" id="agregarProducto">Agregar Venta</button>
+      <button type="button" class="btn btn-primary mb-3" (click)="listaVentas()" id="listaVentas">Listar Ventas</button>
+  </div></div>
+    
+    <app-add-venta (listaVentas)="listaVentas($event)" *ngIf="showAdd"  ></app-add-venta>
+    <app-edit-venta [venta]="venta" *ngIf="showEdit"></app-edit-venta>
+    <app-list-ventas  (verVenta)="verVenta($event)"
+                      (editarVenta)="editarVenta($event)"
+                      (borrarVenta)="borrarVenta($event)"
+    *ngIf="showList"></app-list-ventas>
+    <app-view-venta [venta]="venta" *ngIf="showView"></app-view-venta>    
+  
+</form>

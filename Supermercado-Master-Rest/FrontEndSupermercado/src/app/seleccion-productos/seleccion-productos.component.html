@@ -1,0 +1,15 @@
+
+<div class="grid">  
+        
+        <div  *ngFor="let p of productos" (click)="productSelected(p.id)" > 
+          <div class="producto" id = "product{{p.id}}">
+          <br>Nombre: {{p.nombre}}     
+          <br>SKU: {{p.sku}}
+          <br>Valor: {{p.valor}}
+          <br>Descuento: {{p.descuento}}
+        </div>
+        </div>
+          
+  </div>
+
+
