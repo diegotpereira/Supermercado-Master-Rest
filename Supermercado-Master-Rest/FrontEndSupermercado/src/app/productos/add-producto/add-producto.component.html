@@ -1,27 +1,27 @@
 <div class="text-center fondo1">
     <form id="regisVete" (ngSubmit)="addProducto()">
       <div class="row d-flex justify-content-center mb-0">
-        <label class="tituloForm mb-0 mt-3">Registrar un producto</label>
+        <label class="tituloForm mb-0 mt-3">Cadastrar un produto</label>
       </div>
       <!--Fila 1 Datos Principales-->
       <div class="row form-group d-flex justify-content-center">
         <!--Campo Nombre-->
         <div class="col-5 p-0 campo">
-          <label class="letraForm">Nombre</label>
-          <input type="text" class="form-control" [(ngModel)]="producto.nombre" name="nombre" placeholder="Nombre">
+          <label class="letraForm">Nome</label>
+          <input type="text" class="form-control" [(ngModel)]="producto.nombre" name="nombre" placeholder="Nome">
         </div>
         <!--Fin Campo Nombre-->
         <!--Campo Nombre-->
         <div class="col-5 p-0 campo">
-            <label class="letraForm">Sku</label>
-            <input type="text" class="form-control" [(ngModel)]="producto.sku" name="sku" placeholder="Sku">
+            <label class="letraForm">Código do produto</label>
+            <input type="text" class="form-control" [(ngModel)]="producto.sku" name="sku" placeholder="Código">
           </div>
           <!--Fin Campo Nombre-->
       </div>
       <div class="row form-group d-flex justify-content-center">
           <!--Campo Nombre-->
           <div class="col-5 p-0 campo">
-            <label class="letraForm">unidad de medida</label>
+            <label class="letraForm">unidade de medida</label>
             <select class="form-control ml-0 px-2" id="minu1" [(ngModel)]="producto.uniMedida" name="uniMedida">
               <option>Kg</option>
               <option>g</option>
@@ -29,8 +29,8 @@
               <option>cm</option>
               <option>l</option>
               <option>ml</option>
-              <option>galón</option>
-              <option>unidad</option>
+              <option>galão</option>
+              <option>unidade</option>
             </select>
           </div>
           <!--Fin Campo Nombre-->
@@ -44,18 +44,18 @@
         <div class="row form-group d-flex justify-content-center">
             <!--Campo Nombre-->
             <div class="col-5 p-0 campo">
-              <label class="letraForm">Descuento</label>
+              <label class="letraForm">Desconto</label>
               <div class="d-flex justify-component-center">
-                <input type="text" class="form-control col-10" [(ngModel)]="producto.descuento" name="descuento" placeholder="Descuetno">
+                <input type="text" class="form-control col-10" [(ngModel)]="producto.descuento" name="descuento" placeholder="Desconto">
                 <label class="letraForm col-1">%</label>
               </div>
             </div>
             <!--Fin Campo Nombre-->
           </div>
       <div class="row form-group d-flex justify-content-center">
-        <button type="submit" class="btn btn-primary mb-3" id="addProducto">Agregar Producto</button>
+        <button type="submit" class="btn btn-primary mb-3" id="addProducto">Adicionar Produto</button>
       </div>
     </form>
   </div>
 <h1>-----------------------------</h1>
-<button type="button" (click)="addProducts()" id="addProducts">Agregar Productos</button>
+<button type="button" (click)="addProducts()" id="addProducts">Adicionar Produtos</button>
