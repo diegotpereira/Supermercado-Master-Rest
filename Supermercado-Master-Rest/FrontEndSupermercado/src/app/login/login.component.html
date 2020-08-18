@@ -1,22 +1,22 @@
 <div class="text-center fondo1">
   <form id="regisVete"  *ngIf ="showLogin" (ngSubmit)="doLogin()">
     <div class="row d-flex justify-content-center mb-0">
-      <label class="tituloForm mb-0 mt-3">Iniciar Sesion</label>
+      <label class="tituloForm mb-0 mt-3">Iniciar Sessão</label>
     </div>
     <!--Fila 1 Datos Principales-->
     <div class="row form-group d-flex justify-content-center">
       <!--Campo Nombre-->
       <div class="col-5 p-0 campo">
-        <label class="letraForm">Nombre</label>
-        <input type="text" class="form-control" [(ngModel)]="user" name="user" placeholder="Nombre">
+        <label class="letraForm">Nome</label>
+        <input type="text" class="form-control" [(ngModel)]="user" name="user" placeholder="Nome">
       </div>
       <!--Fin Campo Nombre-->
     </div>
     <div class="row form-group d-flex justify-content-center">
       <!--Campo Contraseña-->
       <div class="col-5 p-0 campo">
-        <label class="letraForm">Contraseña</label>
-        <input type="password" class="form-control" [(ngModel)]="password" name="password" placeholder="Contraseña">
+        <label class="letraForm">Senha</label>
+        <input type="password" class="form-control" [(ngModel)]="password" name="password" placeholder="Senha">
       </div>
       <!--Fin Campo Contraseña-->
     </div>
@@ -26,7 +26,7 @@
   </form>
   <div *ngIf ="showLogin" class="row form-group d-flex justify-content-center">
     
-    <button name="registro" class="btn btn-success m-2 col-4" (click) ="registrar()" [routerLink]="['registro']" routerLinkActive='router-link-active' >Registrarse</button>
+    <button name="registro" class="btn btn-success m-2 col-4" (click) ="registrar()" [routerLink]="['registro']" routerLinkActive='router-link-active' >Cadastre-se</button>
   </div>
   <div *ngIf ="showLogout" class="row form-group d-flex justify-content-center">
     <button name="logout" class="btn btn-success m-2 col-4" (click)="logout()">Logout</button>
