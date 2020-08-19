@@ -62,9 +62,7 @@ public class VentaService {
 	@PreAuthorize("hasRole('ROLE_CAJERO')")
 	@RequestMapping(value = "/delete/{id}", method = RequestMethod.POST)
 	public void delete(@PathVariable("id") Long id) {
-		/*for (Detalle d : v.getDetalles()) {
-			repositoryDetalle.delete(d);
-		}*/
+		
 		repositoryVenta.deleteById(id);
 	}
 	
