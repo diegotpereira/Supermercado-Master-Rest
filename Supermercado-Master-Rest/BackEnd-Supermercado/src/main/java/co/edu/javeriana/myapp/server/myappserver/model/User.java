@@ -15,9 +15,6 @@ import javax.persistence.OneToMany;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-// Ver http://www.baeldung.com/role-and-privilege-for-spring-security-registration
-
-
 
 public class User implements UserDetails {
 	private static final long serialVersionUID = 1987040876334251017L;
