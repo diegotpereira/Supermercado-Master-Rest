@@ -49,12 +49,6 @@ public class ProductoService {
 		return repository.save(p);
     }
 	
-	/*@PreAuthorize("hasRole('ROLE_BODEGERO')")
-	@RequestMapping(value = "/delete/{id}", method = RequestMethod.POST)
-	public void delete(@PathVariable("id") Long id) {
-		
-		repository.deleteById(id);
-	}*/
 	@PreAuthorize("hasRole('ROLE_BODEGERO')")
 	@RequestMapping(value = "/delete", method = RequestMethod.POST)
 	public void delete(@RequestBody Producto p) {
