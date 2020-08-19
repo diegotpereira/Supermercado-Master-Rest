@@ -25,7 +25,7 @@ export class AddProductoComponent implements OnInit {
     
     if(this.restClient.addProducto(this.producto)){
       this.producto = new Producto();
-      alert("Insira um novo produto");
+      alert("Produto novo adicionado");
     }else{
       alert("Ocorreu um erro");
     }
