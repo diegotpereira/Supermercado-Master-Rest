@@ -70,7 +70,7 @@ export class LoginComponent implements OnInit {
 
   logout() {
     this.restClient.logout().subscribe(data => {
-      alert("Sesión Finalizada");
+      alert("Sessão encerrada");
       this.showLogin = true;
       this.showLogout = false;
     }, error => {
