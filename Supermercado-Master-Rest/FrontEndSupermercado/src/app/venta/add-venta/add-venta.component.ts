@@ -39,13 +39,13 @@ export class AddVentaComponent implements OnInit {
     this.venta.fecha = new Date();
 
     if(this.restClient.addVenta(this.venta)){
-          alert("Se agregó la venta");
+          alert("Sua compra foi adicionada");
 
           this.listaVentas.emit(true);
           this.venta = new Venta();
           this.detalles= [];
         }else{
-          alert("Ha ocurrido un error");
+          alert("Ocorreu um erro");
         }
    
   }
