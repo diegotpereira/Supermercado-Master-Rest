@@ -14,7 +14,6 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 
-// Ver http://www.baeldung.com/securing-a-restful-web-service-with-spring-security
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 
@@ -38,9 +37,9 @@ public class SecConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http
-			.cors() //.configurationSource(request -> new CorsConfiguration().applyPermitDefaultValues())
+			.cors() 
 			.and()
-			.csrf().disable()  // Para mejorar seguridad, es recomendable activar CSRF, aunque eso requiere de varios cambios a la configuración actual
+			.csrf().disable()  
 			.exceptionHandling()
 				.authenticationEntryPoint(authenticationEntryPoint)
 			.and()
@@ -62,7 +61,7 @@ public class SecConfig extends WebSecurityConfigurerAdapter {
 
 	@Bean
 	public CorsFilter corsFilter() {
-		// ver https://stackoverflow.com/a/42053745
+		
 		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
 		CorsConfiguration config = new CorsConfiguration();
 		config.setAllowCredentials(true);
