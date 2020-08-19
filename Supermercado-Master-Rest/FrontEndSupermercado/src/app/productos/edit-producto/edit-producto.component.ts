@@ -21,10 +21,10 @@ export class EditProductoComponent implements OnInit {
   guardarProducto(){
     if(this.restClient.editProducto(this.producto)){
       this.producto = new Producto();
-      alert("Producto Editado");
+      alert("Produto Alterado");
       this.listarProductos.emit(true);
     }else{
-      alert("Ha ocurrido un error");
+      alert("Ocorreu um erro");
     }
   }
 }
