@@ -20,10 +20,10 @@ export class RegistroComponent implements OnInit {
   registrar(){
     
     if(this.restClient.addUsuario(this.usuario)){
-      alert("Registro exitóso");
+      alert("Cadastrado com sucesso");
       this.usuario = new Usuario();
     }else{
-      alert("Ha ocurrido un error");
+      alert("Ocorreu um erro");
     }
    
   }
