@@ -15,12 +15,6 @@ public class Supermercado {
 	private Long id;
 	private String name;
 	
-	//@OneToMany(mappedBy="supermercados")
-	//private List<Usuario> usuarios;
-	
-	//@OneToMany(mappedBy="supermercadop")
-	//private List<Producto> productos;
-
 	public Long getId() {
 		return id;
 	}
@@ -36,23 +30,4 @@ public class Supermercado {
 	public void setName(String name) {
 		this.name = name;
 	}
-/*
-	public List<Usuario> getUsuarios() {
-		return usuarios;
-	}
-
-	public void setUsuarios(List<Usuario> usuarios) {
-		this.usuarios = usuarios;
-	}
-
-	public List<Producto> getProductos() {
-		return productos;
-	}
-
-	public void setProductos(List<Producto> productos) {
-		this.productos = productos;
-	}
-*/
-
-
 }
