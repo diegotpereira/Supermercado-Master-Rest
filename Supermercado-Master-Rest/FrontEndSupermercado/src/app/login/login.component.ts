@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
       this.onLogin.emit(true);
       alert(data);
     }, error => {
-      alert("Usuario o contraseña invalidos");
+      alert("Nome de usuário ou senha inválidos");
       this.message = JSON.stringify(error);
       this.onLogin.emit(false);
     });
